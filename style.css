@@ -1,0 +1,100 @@
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  
+  aside {
+    float: left;
+  }
+  
+  main {
+    float: left;
+  }
+  
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 1000px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25em;
+  }
+  
+  header {
+    background-color:  rgb(109, 231, 164);
+    height: 100px;
+    padding: 10px;
+    border: 1px solid white;
+  }
+  
+  aside {
+    background-color:  rgb(109, 231, 164);
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid white;
+  }
+  
+  main {
+    background-color: rgb(109, 231, 164);
+    width: 700px;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid white;
+  }
+  
+  footer {
+    background-color: rgb(109, 231, 164);
+    width: 1000px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid white;
+  }
+  
+  #one{
+      float:left;
+  }
+  #two{
+    float:left;
+}
+#three{
+    float:left;
+}
+#four{
+    float:left;
+}
+#five{
+    float:left;
+}
+#ten{
+    float:left;
+}
+#eleven{
+    float:left;
+}
+#twelve{
+    float:left;
+}
+#nine{
+    float:left;
+}
+
+#container{
+    float:left;
+    padding-left: 180px;
+    padding-top: 30px;
+    padding-right: 90px;
+    padding-bottom: 30px;
+}
+#container2{
+    float:left;
+    padding-left: 90px;
+    padding-top: 30px;
+    padding-right: 90px;
+    padding-bottom: 30px;
+}
