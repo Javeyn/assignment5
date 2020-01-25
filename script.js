@@ -6,7 +6,7 @@ function update() {
 setInterval(update, 1000);
 
 
-var hourArry = ["9:00 a.m.", "10:00 a.m.", "11:00 a.m.", "12:00 p.m.", "1:00 p.m.", "2:00 p.m.", "3:00 p.m.", "4:00 p.m.", "5:00 p.m.",]
+var hours = ["9:00 a.m.", "10:00 a.m.", "11:00 a.m.", "12:00 p.m.", "1:00 p.m.", "2:00 p.m.", "3:00 p.m.", "4:00 p.m.", "5:00 p.m.",]
 var container = $(".container");
 
 var date = moment("12/25/1995", "MM-DD-YYYY");
@@ -20,14 +20,14 @@ const apiKey = "27428ea9a3d610198180273b120a59fc";
 const ApiAddress = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName},usa&appid=${apiKey}`;
 
 
-function getdata() {
+// function getdata() {
 
 	$.ajax({
 		url: ApiAddress,
 		method: "GET"
 	})
 		.then(function (response) {
-			// console.log(response)
+			console.log(response.list[i].main.temp)
 
 
 			for (let i = 0; i < 5; i++) {
@@ -49,20 +49,20 @@ function getdata() {
 			}
 		})
 
-}
+// }
 
 
 $("#search").on("click", function (e) {
 	e.preventDefault();
 	console.log("teting")
-	getdata();
+	// getdata();
 
 
 })
 
 
 
-for (let i = 0; i < hourArry.length; i++) {
+for (let i = 0; i < hours.length; i++) {
 	var row = $("<div>");
 	row.addClass("row");
 	container.append(row);
@@ -70,15 +70,15 @@ for (let i = 0; i < hourArry.length; i++) {
 
 	var timeBlock = $("<div>");
 	timeBlock.addClass("time-block col-md-2");
-	timeBlock.text(hourArry[i]);
+	timeBlock.text(hours[i]);
 	row.append(timeBlock);
 
 	var textArea = $("<textarea>");
 	textArea.addClass("textarea col-md-9");
-	textArea.attr('id', hourArry[i]);
+	textArea.attr('id', hours[i]);
 	textArea.attr("placeholder", "What needs to be done?");
-	if (localStorage.getItem(hourArry[i]) !== null) {
-		textArea.text(localStorage.getItem(hourArry[i]))
+	if (localStorage.getItem(hours[i]) !== null) {
+		textArea.text(localStorage.getItem(hours[i]))
 
 	}
 	row.append(textArea);
